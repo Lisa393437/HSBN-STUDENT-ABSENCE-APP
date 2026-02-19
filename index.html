@@ -1,36 +1,86 @@
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Players First Absence Form</title>
+  <title>HSBN Absence Form</title>
   <link rel="manifest" href="manifest.json">
-<link rel="apple-touch-icon" href="logo.png  <style>
+  <meta name="theme-color" content="#1a1a1a">
+  <style>
     body {
-      margin: 0;
-      padding: 0;
       font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f5f5f5;
+      margin: 20px;
+      background-color: #f9f9f9;
     }
-    #logo {
-      max-width: 200px;
-      margin: 20px auto;
+    img {
       display: block;
+      margin: 0 auto 20px;
+      max-width: 150px;
     }
-    iframe {
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea, button {
       width: 100%;
-      height: calc(100vh - 80px); /* leaves space for logo */
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 15px;
+      background-color: #1a1a1a;
+      color: #fff;
       border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #333;
     }
   </style>
 </head>
 <body>
-  <img id="logo" src="logo.png" alt="Players First Logo">
-  <iframe
-    src="https://docs.google.com/forms/d/e/1FAIpQLSd2cBAsYcljQEtQt4hUR6So1MK0qsvPtmVeT6x7Xp7besgIgw/viewform?embedded=true">
-  </iframe>
-  <!--rebuild trigger-->
+
+  <img src="logo.png" alt="HSBN Logo">
+
+  <form action="YOUR_FORM_URL" method="POST">
+    <label for="playerName">Player Name:</label>
+    <input type="text" id="playerName" name="playerName" required>
+
+    <label for="school">School:</label>
+    <select id="school" name="school">
+      <option value="Coburg">Coburg</option>
+      <option value="Brunswick">Brunswick</option>
+    </select>
+
+    <label for="yearLevel">Year Level:</label>
+    <select id="yearLevel" name="yearLevel">
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+    </select>
+
+    <label for="dateAbsent">Date of Absence:</label>
+    <input type="date" id="dateAbsent" name="dateAbsent" required>
+
+    <label for="reason">Reason:</label>
+    <textarea id="reason" name="reason" rows="3"></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+
 </body>
-</html>
+</html>  
+   
