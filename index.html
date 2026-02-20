@@ -4,88 +4,96 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HSBN Absence Form</title>
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#1a1a1a">
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 20px;
-      background-color: #f9f9f9;
+      background: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
-    img {
-      display: block;
-      margin: 0 auto 20px;
-      max-width: 150px;
-    }
-    form {
-      max-width: 400px;
-      margin: 0 auto;
+    .form-container {
       background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    label {
-      display: block;
-      margin-top: 10px;
-    }
-    input, select, textarea, button {
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      box-sizing: border-box;
+      max-width: 400px;
     }
-    button {
+    .form-container img {
+      display: block;
+      margin: 0 auto 20px auto;
+      max-width: 200px;
+    }
+    .form-container label {
+      display: block;
       margin-top: 15px;
-      background-color: #1a1a1a;
-      color: #fff;
-      border: none;
-      cursor: pointer;
+      margin-bottom: 5px;
       font-weight: bold;
     }
-    button:hover {
-      background-color: #333;
+    .form-container input, .form-container select, .form-container textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    .form-container button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background: #0072ce;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .form-container button:hover {
+      background: #005ea2;
     }
   </style>
 </head>
 <body>
 
-  <img src="logo.png" alt="HSBN Logo">
+  <div class="form-container">
+    <img src="logo.png" alt="HSBN Logo">
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSd2cBAsYcljQEtQt4hUR6So1MK0qsvPtmVeT6x7Xp7besgIgw/formResponse" method="POST" target="_self">
 
-  <form action="https://docs.google.com/forms/d/e/1FAIpQLSd2cBAsYcljQEtQt4hUR6So1MK0qsvPtmVeT6x7Xp7besgIgw/formResponse method="POST">
+      <label for="playerName">Player Name</label>
+      <input type="text" name="entry.1221117700" id="playerName" placeholder="Enter player name" required>
 
-    <label for="playerName">Player Name:</label>
-    <input type="text" id="playerName" name="playerName" required>
+      <label for="school">School</label>
+      <select name="entry.1125437848" id="school" required>
+        <option value="" disabled selected>Select school</option>
+        <option value="Coburg">Coburg</option>
+        <option value="Brunswick">Brunswick</option>
+        <option value="Preston">Preston</option>
+        <option value="Princess Hill">Princess Hill</option>
+        <option value="Northcote">Northcote</option>
+      </select>
 
-    <label for="school">School:</label>
-    <select id="school" name="school" required>
-      <option value="">Select a school</option>
-      <option value="Coburg">Coburg</option>
-      <option value="Brunswick">Brunswick</option>
-      <option value="Preston">Preston</option>
-      <option value="Princess Hill">Princess Hill</option>
-      <option value="Northcote">Northcote</option>
-    </select>
+      <label for="yearLevel">Year Level</label>
+      <select name="entry.743652846" id="yearLevel" required>
+        <option value="" disabled selected>Select year level</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
 
-    <label for="yearLevel">Year Level:</label>
-    <select id="yearLevel" name="yearLevel" required>
-      <option value="">Select year level</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-      <option value="10">10</option>
-      <option value="11">11</option>
-      <option value="12">12</option>
-    </select>
+      <label for="date">Date of Absence</label>
+      <input type="date" name="entry.301072313" id="date" required>
 
-    <label for="dateAbsent">Date of Absence:</label>
-    <input type="date" id="dateAbsent" name="dateAbsent" required>
+      <label for="reason">Reason</label>
+      <textarea name="entry.887862006" id="reason" placeholder="Enter reason for absence" required></textarea>
 
-    <label for="reason">Reason:</label>
-    <textarea id="reason" name="reason" rows="3"></textarea>
-
-    <button type="submit">Submit</button>
-  </form>
+      <button type="submit">Submit Absence</button>
+    </form>
+  </div>
 
 </body>
-</html>
+</html>   
