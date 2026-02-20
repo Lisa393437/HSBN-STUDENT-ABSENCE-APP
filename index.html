@@ -53,17 +53,23 @@
   <img src="logo.png" alt="HSBN Logo">
 
   <form action="YOUR_FORM_URL" method="POST">
+
     <label for="playerName">Player Name:</label>
     <input type="text" id="playerName" name="playerName" required>
 
     <label for="school">School:</label>
-    <select id="school" name="school">
+    <select id="school" name="school" required>
+      <option value="">Select a school</option>
       <option value="Coburg">Coburg</option>
       <option value="Brunswick">Brunswick</option>
+      <option value="Preston">Preston</option>
+      <option value="Princess Hill">Princess Hill</option>
+      <option value="Northcote">Northcote</option>
     </select>
 
     <label for="yearLevel">Year Level:</label>
-    <select id="yearLevel" name="yearLevel">
+    <select id="yearLevel" name="yearLevel" required>
+      <option value="">Select year level</option>
       <option value="7">7</option>
       <option value="8">8</option>
       <option value="9">9</option>
@@ -82,5 +88,4 @@
   </form>
 
 </body>
-</html>  
-   
+</html>
